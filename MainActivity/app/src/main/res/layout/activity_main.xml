@@ -1,19 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/main"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+        android:padding="0dp"
+        tools:context=".MainActivity"
+        android:background="@color/dark_grey_background">
 
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/topBar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/black">
+
+        <ImageButton
+
+                android:id="@+id/buttonMenuUsuario"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:padding="0dp"
+                android:background="@drawable/circle_background"
+                android:clipToOutline="true"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="Acesso ao menu do utilizador"
+                android:src="@drawable/ic_user_ProjectDroid"
+                android:scaleType="fitCenter"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+            android:id="@+id/bottombar"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@drawable/bottombar_shape"
+            android:orientation="horizontal"
+
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageButton
+                android:id="@+id/settings_button"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:background="@drawable/circle_background"
+                android:contentDescription="Botão definições"
+                android:src="@drawable/ic_definicoes_ProjectDroid"
+                android:scaleType="fitCenter"
+                android:layout_weight="1"/>S
+
+
+        <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:background="@drawable/circle_background"
+                android:contentDescription="Botão watchlist"
+                android:src="@drawable/ic_watchlist_ProjectDroid"
+                android:scaleType="fitCenter"
+                android:layout_weight="1"/>
+
+        <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:background="@drawable/circle_background"
+                android:contentDescription="Botão home  "
+                android:src="@drawable/ic_home_ProjectDroid"
+                android:scaleType="fitCenter"
+                android:layout_weight="1"/>
+
+        <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:background="@drawable/circle_background"
+                android:contentDescription="Botão tracking"
+                android:src="@drawable/ic_tracking_ProjectDroid"
+                android:scaleType="fitCenter"
+                android:layout_weight="1"/>
+
+        <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:background="@drawable/circle_background"
+                android:contentDescription="Botão reviews"
+                android:src="@drawable/ic_watchlist_ProjectDroid"
+                android:scaleType="fitCenter"
+                android:layout_weight="1"
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
