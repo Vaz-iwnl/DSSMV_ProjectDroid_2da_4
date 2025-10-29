@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        ImageButton navReviewsButton, navTrackingButton, navSettingsButton, navHomeButton, navWatchlistButton;
+        ImageButton navReviewsButton, navTrackingButton, navSettingsButton, navHomeButton, navWatchlistButton, navUserButton;
 
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         navTrackingButton = findViewById(R.id.tracking_button);
         navSettingsButton = findViewById(R.id.settings_button);
         navWatchlistButton = findViewById(R.id.watchlist_button);
+        navUserButton = findViewById(R.id.user_button);
 
         if (savedInstanceState == null) {
             loadFragment(new HomeFragment());
@@ -71,6 +72,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 loadFragment(new TrackingFragment());
+            }
+        });
+
+        navUserButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadFragment(new UserFragment());
             }
         });
     }
