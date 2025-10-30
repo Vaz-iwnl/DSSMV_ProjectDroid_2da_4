@@ -1,0 +1,59 @@
+# === Android/Gradle ===
+
+# Gradle build folders
+.gradle/
+*/build/
+build/
+
+# Local configuration file (SDK path, etc)
+local.properties
+keystore.properties
+
+# Signing files
+*.jks
+*.keystore
+
+# APK/Bundle files
+*.apk
+*.ap_
+*.aab
+
+# Dex files
+*.dex
+
+# Generated files
+project_dex_archive/
+runtime_symbol_list/
+signing_config_versions/
+source_set_path_map/
+stable_resource_ids_file/
+sub_project_dex_archive/
+tmp/
+outputs/
+*/tmp/
+
+# Logs
+*.log
+
+# === IntelliJ IDEA ===
+
+# IDEA project files
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Captures and Native Build
+captures/
+.externalNativeBuild/
+
+# Kotlin/Java temp files
+*.class
+*.hprof
+
+# Proguard folder
+proguard/
