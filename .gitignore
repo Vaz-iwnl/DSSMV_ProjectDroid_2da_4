@@ -3,7 +3,7 @@
 # Gradle build folders
 .gradle/
 */build/
-build/
+app/build/
 
 # Local configuration file (SDK path, etc)
 local.properties
