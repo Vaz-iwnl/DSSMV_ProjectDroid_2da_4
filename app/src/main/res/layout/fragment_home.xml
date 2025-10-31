@@ -1,20 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/dark_grey_background">
 
-    <TextView
-            android:layout_width="wrap_content"
+    <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Home Fragment"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            android:orientation="vertical">
+        <TextView
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home Fragment"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:layout_gravity="center_horizontal"/>
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/ic_titulov3_projectdroid"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="66dp" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor."
+                android:textColor="#CCCCCC"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mais algum texto aqui..."
+                android:textColor="#CCCCCC"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mais algum texto aqui..."
+                android:textColor="#CCCCCC"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mais algum texto aqui..."
+                android:textColor="#CCCCCC"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mais algum texto aqui..."
+                android:textColor="#CCCCCC"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mais algum texto aqui..."
+                android:textColor="#CCCCCC"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mais algum texto aqui..."
+                android:textColor="#CCCCCC"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mais algum texto aqui..."
+                android:textColor="#CCCCCC"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mais algum texto aqui..."
+                android:textColor="#CCCCCC"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mais algum texto aqui..."
+                android:textColor="#CCCCCC"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mais algum texto aqui..."
+                android:textColor="#CCCCCC"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mais algum texto aqui..."
+                android:textColor="#CCCCCC"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mais algum texto aqui..."
+                android:textColor="#CCCCCC"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mais algum texto aqui..."
+                android:textColor="#CCCCCC"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mais algum texto aqui..."
+                android:textColor="#CCCCCC"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mais algum texto aqui..."
+                android:textColor="#CCCCCC"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fim do Conteúdo"
+                android:textColor="#FF0000"
+                android:textSize="24sp"
+                android:layout_marginTop="32dp"
+                android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+</ScrollView>
