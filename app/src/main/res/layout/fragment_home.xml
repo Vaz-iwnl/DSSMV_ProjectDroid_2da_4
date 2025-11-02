@@ -18,137 +18,20 @@
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:layout_gravity="center_horizontal"/>
-        <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:src="@drawable/ic_titulov3_projectdroid"
-                android:scaleType="centerCrop"
-                android:layout_marginTop="66dp" />
+
 
         <TextView
+                android:id="@+id/textview_teste"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor."
+
                 android:textColor="#CCCCCC"
                 android:textSize="18sp"
                 android:layout_marginTop="16dp" />
 
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mais algum texto aqui..."
-                android:textColor="#CCCCCC"
-                android:textSize="18sp"
-                android:layout_marginTop="16dp" />
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mais algum texto aqui..."
-                android:textColor="#CCCCCC"
-                android:textSize="18sp"
-                android:layout_marginTop="16dp" />
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mais algum texto aqui..."
-                android:textColor="#CCCCCC"
-                android:textSize="18sp"
-                android:layout_marginTop="16dp" />
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mais algum texto aqui..."
-                android:textColor="#CCCCCC"
-                android:textSize="18sp"
-                android:layout_marginTop="16dp" />
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mais algum texto aqui..."
-                android:textColor="#CCCCCC"
-                android:textSize="18sp"
-                android:layout_marginTop="16dp" />
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mais algum texto aqui..."
-                android:textColor="#CCCCCC"
-                android:textSize="18sp"
-                android:layout_marginTop="16dp" />
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mais algum texto aqui..."
-                android:textColor="#CCCCCC"
-                android:textSize="18sp"
-                android:layout_marginTop="16dp" />
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mais algum texto aqui..."
-                android:textColor="#CCCCCC"
-                android:textSize="18sp"
-                android:layout_marginTop="16dp" />
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mais algum texto aqui..."
-                android:textColor="#CCCCCC"
-                android:textSize="18sp"
-                android:layout_marginTop="16dp" />
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mais algum texto aqui..."
-                android:textColor="#CCCCCC"
-                android:textSize="18sp"
-                android:layout_marginTop="16dp" />
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mais algum texto aqui..."
-                android:textColor="#CCCCCC"
-                android:textSize="18sp"
-                android:layout_marginTop="16dp" />
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mais algum texto aqui..."
-                android:textColor="#CCCCCC"
-                android:textSize="18sp"
-                android:layout_marginTop="16dp" />
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mais algum texto aqui..."
-                android:textColor="#CCCCCC"
-                android:textSize="18sp"
-                android:layout_marginTop="16dp" />
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="6dp"
+                android:layout_height="0dp"/>
 
-
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mais algum texto aqui..."
-                android:textColor="#CCCCCC"
-                android:textSize="18sp"
-                android:layout_marginTop="16dp" />
-
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mais algum texto aqui..."
-                android:textColor="#CCCCCC"
-                android:textSize="18sp"
-                android:layout_marginTop="16dp" />
-
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Fim do Conteúdo"
-                android:textColor="#FF0000"
-                android:textSize="24sp"
-                android:layout_marginTop="32dp"
-                android:layout_gravity="center_horizontal" />
     </LinearLayout>
 </ScrollView>
