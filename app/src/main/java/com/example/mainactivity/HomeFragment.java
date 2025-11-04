@@ -5,11 +5,14 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.bumptech.glide.Glide;
 
 import java.util.List;
 
@@ -19,7 +22,9 @@ import retrofit2.Response;
 
 public class HomeFragment extends Fragment {
 
+    public static final String TAG = "HomeFragment";
     private TextView homeTitle;
+    private ImageView homePoster;
 
     @Nullable
     @Override
@@ -31,6 +36,7 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         homeTitle = view.findViewById(R.id.textview_teste);
+        homePoster = view.findViewById(R.id.home_fragment_poster);
 
         fetchPopularMovies();
     }
@@ -51,6 +57,28 @@ public class HomeFragment extends Fragment {
                     if (!movies.isEmpty()) {
                         Movie firstMovie = movies.get(0);
                         homeTitle.setText(firstMovie.getTitle());
+
+                        String posterPath = firstMovie.getPosterPath();
+
+                        // 2. Vamos imprimir o caminho no Logcat
+                        Log.d(TAG, "Poster path recebido: " + posterPath);
+
+                        if (posterPath != null && !posterPath.isEmpty()) {
+                            // 3. Se o caminho NÃO for nulo, construímos o URL
+                            String posterUrl = "https://image.tmdb.org/t/p/w500" + posterPath;
+
+                            // 4. Imprimir o URL completo
+                            Log.d(TAG, "A carregar imagem de: " + posterUrl);
+
+                            // 5. Dizemos ao Glide para carregar E mostar um erro se falhar
+                            Glide.with(HomeFragment.this)
+                                    .load(posterUrl)
+                                    .error(android.R.drawable.ic_dialog_alert) // 👈 Mostra um ícone de erro se falhar
+                                    .into(homePoster);
+                        } else {
+                            // 6. Se o caminho FOR nulo, avisamos no Logcat
+                            Log.e(TAG, "O posterPath para o filme '" + firstMovie.getTitle() + "' é nulo ou vazio!");
+                            homePoster.setImageResource(android.R.drawable.ic_dialog_alert);} // Mostra o erro
                     } else {
                         homeTitle.setText("Nenhum filme popular encontrado.");
                     }
