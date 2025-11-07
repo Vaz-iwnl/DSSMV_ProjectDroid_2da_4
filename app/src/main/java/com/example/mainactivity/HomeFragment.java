@@ -54,6 +54,7 @@ public class HomeFragment extends Fragment {
 
     private void fetchPopularMovies() {
         String apiKey = BuildConfig.TMDB_API_KEY;
+        Log.d(TAG, "fetchPopularMovies: " + apiKey);
 
         Call<MovieResponse> call = RetrofitClient.getApi().getPopularMovies(apiKey);
 
