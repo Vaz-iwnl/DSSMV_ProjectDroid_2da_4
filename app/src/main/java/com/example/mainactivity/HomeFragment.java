@@ -53,15 +53,15 @@ public class HomeFragment extends Fragment {
     }
 
     private void fetchPopularMovies() {
-       String apiKey = BuildConfig.TMDB_API_KEY;
+        String apiKey = BuildConfig.TMDB_API_KEY;
+        Log.d(TAG, "fetchPopularMovies: " + apiKey);
 
-        TMDbAPI apiService = RetrofitClient.getApi();
-        Call<MovieResponse> call = apiService.getPopularMovies(apiKey);
+        Call<MovieResponse> call = RetrofitClient.getApi().getPopularMovies(apiKey);
 
         call.enqueue(new Callback<MovieResponse>() {
 
             @Override
-           public void onResponse(Call<MovieResponse> call, Response<MovieResponse> response) {
+            public void onResponse(Call<MovieResponse> call, Response<MovieResponse> response) {
                 if (response.isSuccessful() && response.body() != null) {
 
                     movieList.clear();
