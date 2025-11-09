@@ -12,14 +12,14 @@
             android:id="@+id/logoImageView"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="248dp"
             android:adjustViewBounds="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_titulov3_projectdroid"
-            tools:src="@tools:sample/avatars" />
-
+            tools:src="@tools:sample/avatars"
+            app:layout_constraintHorizontal_bias="0.496"/>
     <LinearLayout
             android:id="@+id/buttonContainer"
             android:layout_width="0dp"
