@@ -39,5 +39,9 @@
                 android:exported="false">
         </activity>
 
+        <activity
+                android:name=".ChangePasswordActivity"
+                android:exported="false" />
+
     </application>
 </manifest>

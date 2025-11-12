@@ -9,11 +9,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-// 1. Importar as ferramentas de rede
 import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
+import android.content.SharedPreferences;
+import android.content.Context;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -31,7 +33,6 @@ public class LoginActivity extends AppCompatActivity {
         passwordEditText = findViewById(R.id.passwordEditText);
         Button loginButton = findViewById(R.id.loginButton);
         TextView forgotPasswordText = findViewById(R.id.forgotPasswordText);
-
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,17 +57,13 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void fazerLogin(String email, String password) {
-
         RestDbAPI apiService = RetrofitClient.getRestDbApi();
-
         String jsonQuery = "{\"email\":\"" + email + "\"}";
-
         Call<List<User>> call = apiService.loginUser(API_KEY, jsonQuery);
 
         call.enqueue(new Callback<List<User>>() {
             @Override
             public void onResponse(Call<List<User>> call, Response<List<User>> response) {
-
                 if (response.isSuccessful() && response.body() != null) {
                     List<User> users = response.body();
 
@@ -74,10 +71,14 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText(LoginActivity.this, "User not found", Toast.LENGTH_SHORT).show();
                     } else {
                         User userFromDb = users.get(0);
-
                         if (userFromDb.getPassword().equals(password)) {
                             Toast.makeText(LoginActivity.this, "Login Successful!", Toast.LENGTH_SHORT).show();
 
+                            SharedPreferences prefs = getSharedPreferences("AppPrefs", Context.MODE_PRIVATE);
+                            SharedPreferences.Editor editor = prefs.edit();
+
+                            editor.putString("USER_EMAIL", userFromDb.getEmail());
+                            editor.apply();
 
                             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
